@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home-DashBoard</title>
+</head>
+<body>
+    <h2 class="account-heading">{{ user.username }}</h2>
+    <p class="text-secondary">{{ user.email }}</p>
+	{% for sub in subs %}
+	<article class="media content-section">
+		<p>{{ sub.provider }}</p>
+		<p>{{ sub.tier }}</p>
+		<p>{{ sub.date_started }}</p>
+		<p>{{ sub.date_end }}</p>
+		<p>{{ sub.author }}</p>
+	</article>
+	{% endfor %}
+
+</body>
+</html>
