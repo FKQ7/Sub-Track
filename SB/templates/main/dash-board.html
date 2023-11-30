@@ -10,7 +10,7 @@
     <p class="text-secondary">{{ user.email }}</p>
 	{% for sub in subs %}
 	<article class="media content-section">
-		<p>{{ sub.provider }}</p>
+		<a href="{% url 'sub-detail' sub.id %}">Subscrebtion:{{ sub.provider }}</a>
 		<p>{{ sub.tier }}</p>
 		<p>{{ sub.date_started }}</p>
 		<p>{{ sub.date_end }}</p>

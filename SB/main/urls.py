@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home, about, dash_board 
+from . import views
+from .views import SubListView, SubDetailView, SubCreateView, SubUpdateView, SubDeleteView
 urlpatterns = [
-    path('', home, name="home"),
-    path('about/', about),
-    path('dash-board/', dash_board, name='dash-board'),    
+    path('', views.home, name="home"),
+    path('about/', views.about, name="about"),
+    path('dash-board/', views.dash_board, name='dash-board'),
+    path('sub/<pk>/', SubDetailView.as_view(), name='sub-detail'),
+    path('sub-create/new/', SubCreateView.as_view(), name='sub-Create'),
+    path('sub/<pk>/update', SubUpdateView.as_view(), name='sub-update'),
+    path('sub/<pk>/delete', SubDeleteView.as_view(), name='sub-delete'),
+
 ]
