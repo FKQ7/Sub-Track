@@ -26,11 +26,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('profile/',user_views.profile, name="profile"),
     path('register/',user_views.register, name="register"),
     path('login/',auth_views.LoginView.as_view(template_name='users/login.html'), name="login"),    
     path('logout/',auth_views.LogoutView.as_view(template_name="users/logout.html"), name="logout"), 
 ]
 
-if settings.DEBUG:
+if settings.DEBUG:#if this doesn't work in deployment check https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
