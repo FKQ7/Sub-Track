@@ -1,0 +1,228 @@
+.box {
+    width: 1440px;
+    height: 604px;
+  }
+
+  body{
+    overflow: auto;
+  }
+  
+  .box .rectangle {
+    position: fixed;
+    width: 1920px;
+    height: 604px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgb(8, 3, 109) 0%, rgb(5, 92, 163) 35%, rgba(0,212,255,1) 100%);
+  }
+  
+  .box2 {
+    width: 1450px;
+    height: 123px;
+  }
+  
+  .box2 .navbar {
+    position: fixed;
+    width: 1921px;
+    height: 91px;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+ 
+
+  }
+
+  .label {
+    width: 820px;
+    height: 194px;
+  }
+  
+  .label .track-your-spending {
+    position: fixed;
+    top: 158px;
+    left: 135px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 80px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-size: 84px;
+    animation: slideInFromLeft 2s ease forwards;
+}
+@keyframes slideInFromLeft {
+  0%{
+    transform: translateX(-100%); opacity: 0;
+  }
+  70%{transform: translate(-70);}
+  100% {
+    transform: translateX(0); opacity: 1;
+  }
+}
+
+  
+.hero-subtext{
+    position: fixed;
+    top: 370px;
+    left: 135px;
+    font-family: "Inter-regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    animation: slideInFromLeft 2s ease forwards;
+ 
+}
+
+    .img{
+        width: 410px;
+        height: 390px;
+    }
+
+    .image .pngwing {
+        position: fixed;
+        width: 450px;
+        top: -550px;
+        left: 1105px;
+        object-fit: cover;
+        animation: drop 1.5s ease forwards;
+    }
+  @keyframes drop {
+    0%{ opacity: 0;}
+    70%{transform: translateY(700px);}
+    100%{transform: translateY(650px); opacity: 1;}
+
+    
+  }
+
+.logo{
+  width: 150px;
+  height: 150px;
+}
+
+
+.logo-img {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: -31px;
+    left: -3px;
+    object-fit: cover;
+
+}
+
+.user-io{
+  width: 30px;
+  height: 30px;
+}
+
+.icons{
+
+  position: fixed;
+  right: 33px;
+  top: 26px;
+  object-fit: cover;
+  z-index: 9000;
+}
+
+.icons-2{
+  
+   position: fixed;
+  right: 88px;
+  top: 26px;
+  object-fit: cover;
+  z-index: 9000;
+}
+
+.con-io{ 
+  width: 30px;
+  height: 30px; 
+}
+
+
+
+.icons-3{
+  position: fixed;
+  right: 143px;
+  top: 26px;
+  object-fit: cover;
+  z-index: 9000;
+}
+
+.lang-io{
+  width: 30px;
+  height: 30px; 
+}
+
+
+
+  
+.label .track-your-spending2 {
+  position: fixed;
+  top: 681px;
+  left: 365px;
+  right: 0px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+  font-size: 84px;
+  animation: drop2 3s ease forwards;
+}
+
+@keyframes drop2 {
+  0%{ opacity: 0;}
+  70%{transform: translatex();}
+  100%{transform: translatex(); opacity: 1;}
+
+  
+}
+
+
+.sec1{
+height: 200vh;
+}
+.sec2{
+  height: 100vh;
+}
+
+
+.dash-board{
+
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 34px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  top: 0%;
+  background-color: rgb((255, 255, 255)255, 255); 
+  color: rgb(255, 255, 255); 
+  
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.footer {
+  height: 90px; 
+   position: fixed;
+   left: 0;
+  
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}

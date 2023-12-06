@@ -50,7 +50,7 @@ urlpatterns = [
              template_name='users/password_reset_complete.html'
          ),
          name='password_reset_complete'),
-
+    
 ]
 
 if settings.DEBUG:#if this doesn't work in deployment check https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
