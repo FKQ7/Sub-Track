@@ -22,9 +22,11 @@ from django.urls import path, include
 from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('contact.urls')),    
     path('', include('main.urls')),
     path('profile/',user_views.profile, name="profile"),
     path('register/',user_views.register, name="register"),

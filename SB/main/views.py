@@ -13,6 +13,8 @@ from django.views.generic import (
  DeleteView,
  )
 
+def support_us(request):
+	return render(request ,'main/support_us.html')
 
 # Create your views here.
 def home(request):

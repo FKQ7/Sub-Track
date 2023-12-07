@@ -20,6 +20,7 @@ from . import views
 from .views import SubListView, SubDetailView, SubCreateView, SubUpdateView, SubDeleteView
 urlpatterns = [
     path('', views.home, name="home"),
+    path('support-us/', views.support_us, name="support_us"),
     path('about/', views.about, name="about"),
     path('dash-board/', views.dash_board, name='dash-board'),
     path('sub/<pk>/', SubDetailView.as_view(), name='sub-detail'),
