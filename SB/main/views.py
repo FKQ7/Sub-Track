@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import sub
+from datetime import date
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -27,11 +28,13 @@ def about(request):
 
 @login_required
 def dash_board(request):
-	ordering = ['-date_end']
-	context = {
-		'subs':sub.objects.filter(author=request.user) #the string is the name of the data
-	}
-	return render(request, "main/dash-board.html", context)
+    ordering = ['-date_end']
+    subs = sub.objects.filter(author=request.user)
+    
+    context = {
+        'subs': subs,
+    }
+    return render(request, "main/dash-board.html", context)
 
 class SubListView(LoginRequiredMixin, ListView):#problem with the filter!
 	model = sub
@@ -68,7 +71,7 @@ class SubUpdateView(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
 		if self.request.user == sub.author:
 			return True
 		return False
-
+		
 class SubDeleteView(LoginRequiredMixin, UserPassesTestMixin , DeleteView):
 	model = sub
 	success_url = '/'
