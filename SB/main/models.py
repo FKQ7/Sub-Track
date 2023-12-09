@@ -11,12 +11,11 @@ class sub(models.Model):
 	date_started = models.DateField(auto_now=False, auto_now_add=False)
 	date_end = models.DateField(auto_now=False, auto_now_add=False, )
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
-
+	
 	def remain(self):
 		today = date.today()
 		remaining_days = (self.date_end - today).days
 		return(remaining_days)
 
-		
 	def get_absolute_url(self):
 		return reverse('sub-detail', kwargs={'pk':self.id})

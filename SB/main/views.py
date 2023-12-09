@@ -80,5 +80,3 @@ class SubDeleteView(LoginRequiredMixin, UserPassesTestMixin , DeleteView):
 		if self.request.user == sub.author:
 			return True
 		return False
-
-

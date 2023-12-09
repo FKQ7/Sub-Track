@@ -5,4 +5,10 @@
 	<p>date ened: {{ object.date_end }}</p>
 	<p>ur user {{ object.author }}</p>
 	<p>days remain: {{ object.remain }}</p>
+	{% if object.remain > 0  %}
+        <p>Sub ended </p>
+    {% else  %}
+        <p>sub is valid</p>
+    </article>
+    {% endif %}
 </article>

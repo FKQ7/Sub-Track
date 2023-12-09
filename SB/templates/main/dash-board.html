@@ -17,7 +17,13 @@
         <p>date end: {{ sub.date_end }}</p>
         <p>{{ sub.author }}</p>
         <p>Remaining Days: {{ sub.remain }}</p>
+        <p>{{sub.validity}}</p>
+        {% if sub.remain > 0  %}
+            <p>Sub ended </p>
+        {% else  %}
+            <p>sub is valid</p>
     </article>
+        {% endif %}
     {% endfor %}
 </body>
 </html>
