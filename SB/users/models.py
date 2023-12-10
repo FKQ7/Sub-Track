@@ -2,7 +2,6 @@ from django.db import models
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
-from PIL import Image as Img
 from django.core.files import File
 from django.db import models
 # Create your models here.
