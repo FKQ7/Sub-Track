@@ -16,9 +16,9 @@
         <p>date started: {{ sub.date_started }}</p>
         <p>date end: {{ sub.date_end }}</p>
         <p>{{ sub.author }}</p>
-        <p>Remaining Days: {{ sub.remain }}</p>
+        <p>Remaining Days: {{ sub.d_remain }}</p>
         <p>{{sub.validity}}</p>
-        {% if sub.remain > 0  %}
+        {% if sub.d_remain < 0  %}
             <p>Sub ended </p>
         {% else  %}
             <p>sub is valid</p>
