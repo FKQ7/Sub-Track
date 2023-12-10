@@ -11,6 +11,7 @@ class sub(models.Model):
 	date_started = models.DateField(auto_now=False, auto_now_add=False)
 	date_end = models.DateField(auto_now=False, auto_now_add=False, )
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
+	price = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 	
 	def remain(self):
 		today = date.today()
