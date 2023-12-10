@@ -55,14 +55,14 @@ class SubDetailView(LoginRequiredMixin,UserPassesTestMixin ,DetailView):
 
 class SubCreateView(LoginRequiredMixin, CreateView):
 	model = sub
-	fields = ['provider', 'tier', 'date_started', 'date_end']
+	fields = ['provider', 'price','tier', 'date_started', 'date_end']
 	def form_valid(self, form):
 		form.instance.author=self.request.user
 		return super().form_valid(form)
 
 class SubUpdateView(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
 	model = sub
-	fields = ['provider', 'tier', 'date_started', 'date_end']
+	fields = ['provider', 'tier', 'price' , 'date_started', 'date_end']
 	def form_valid(self, form):
 		form.instance.author=self.request.user
 		return super().form_valid(form)
