@@ -1,0 +1,14 @@
+<article class="media content-section">
+	<p>provider:  {{ object.provider }}</p>
+	<p>tier :{{ object.tier }}</p>
+	<p>date started: {{ object.date_started }}</p>
+	<p>date ened: {{ object.date_end }}</p>
+	<p>ur user {{ object.author }}</p>
+	<p>days remain: {{ object.remain }}</p>
+	{% if object.remain > 0  %}
+        <p>Sub ended </p>
+    {% else  %}
+        <p>sub is valid</p>
+    </article>
+    {% endif %}
+</article>
