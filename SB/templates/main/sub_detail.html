@@ -4,8 +4,8 @@
 	<p>date started: {{ object.date_started }}</p>
 	<p>date ened: {{ object.date_end }}</p>
 	<p>ur user {{ object.author }}</p>
-	<p>days remain: {{ object.d_remain }} days</p>
-	{% if object.d_remain < 0  %}
+	<p>days remain: {{ object.remain }}</p>
+	{% if object.remain < 0  %}
         <p>Sub ended </p>
     {% else  %}
         <p>sub is valid</p>
